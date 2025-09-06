@@ -15,6 +15,10 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/orders", orderRoutes);
+
+app.get("/", (req, res) => {
+  res.send("E-commerce API is running ");
+});
 app.listen(3000, () => {
   console.log('server is running on port 3000');
   
